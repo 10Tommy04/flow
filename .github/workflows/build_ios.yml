@@ -28,7 +28,7 @@ jobs:
 
       - name: Build iOS (Unsigned IPA)
         run: |
-          flutter build ios --release --no-codesign
+          flutter build ios --release --no-codesign --no-tree-shake-icons
           mkdir -p Payload
           mv build/ios/iphoneos/Runner.app Payload/
           zip -r Flow_iOS.ipa Payload
